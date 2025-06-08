@@ -10,6 +10,7 @@ interface FtbaDisplayProps {
       title: string;
       description: string;
       visualization: string;
+      affirmations: string[];
     };
     think: {
       title: string;
@@ -20,11 +21,13 @@ interface FtbaDisplayProps {
       title: string;
       description: string;
       coreBeliefs: string[];
+      affirmations: string[];
     };
     act: {
       title: string;
       description: string;
       actionSteps: string[];
+      affirmations: string[];
     };
   };
   age: string;
@@ -109,23 +112,7 @@ export const FtbaDisplay: React.FC<FtbaDisplayProps> = ({ content, age, category
                 </div>
               )}
 
-              {section.key === 'think' && section.data.affirmations && (
-                <div>
-                  <h4 className="font-semibold text-primary mb-3 flex items-center gap-2">
-                    💬 Power Affirmations
-                  </h4>
-                  <div className="space-y-2">
-                    {section.data.affirmations.map((affirmation, idx) => (
-                      <div key={idx} className="flex items-start gap-3 text-sm">
-                        <span className="text-primary mt-1">•</span>
-                        <span className="text-muted-foreground italic">"{affirmation}"</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {section.key === 'believe' && section.data.coreBeliefs && (
+              {section.key === 'believe' && 'coreBeliefs' in section.data && (
                 <div>
                   <h4 className="font-semibold text-primary mb-3 flex items-center gap-2">
                     🔥 Core Beliefs to Adopt
@@ -141,7 +128,7 @@ export const FtbaDisplay: React.FC<FtbaDisplayProps> = ({ content, age, category
                 </div>
               )}
 
-              {section.key === 'act' && section.data.actionSteps && (
+              {section.key === 'act' && 'actionSteps' in section.data && (
                 <div>
                   <h4 className="font-semibold text-primary mb-3 flex items-center gap-2">
                     🚀 Immediate Action Steps
@@ -158,6 +145,21 @@ export const FtbaDisplay: React.FC<FtbaDisplayProps> = ({ content, age, category
                   </div>
                 </div>
               )}
+
+              {/* Power Affirmations for all sections */}
+              <div>
+                <h4 className="font-semibold text-primary mb-3 flex items-center gap-2">
+                  💫 Power Affirmations
+                </h4>
+                <div className="space-y-2">
+                  {section.data.affirmations.map((affirmation, idx) => (
+                    <div key={idx} className="flex items-start gap-3 text-sm bg-gradient-to-r from-primary/5 to-primary/10 p-3 rounded-lg border border-primary/20">
+                      <span className="text-primary mt-1 text-base">✨</span>
+                      <span className="text-foreground font-medium italic">"{affirmation}"</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </CardContent>
           </Card>
         ))}
@@ -169,11 +171,18 @@ export const FtbaDisplay: React.FC<FtbaDisplayProps> = ({ content, age, category
             <h3 className="text-2xl font-bold mb-4 gradient-text">
               Your Transformation Journey Starts Now
             </h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
               Remember: Transformation happens in the daily practice of these principles. 
               Review your FTBA blueprint daily, visualize your success, and take consistent action. 
               Your future self is counting on the decisions you make today.
             </p>
+            <div className="bg-primary/10 p-4 rounded-lg border border-primary/30 max-w-xl mx-auto">
+              <p className="text-sm text-primary font-semibold mb-2">💡 Daily Practice Tip:</p>
+              <p className="text-sm text-muted-foreground">
+                Read your affirmations aloud each morning with conviction and emotion. 
+                Feel the truth of each statement as you speak it into existence.
+              </p>
+            </div>
           </CardContent>
         </Card>
       </div>
