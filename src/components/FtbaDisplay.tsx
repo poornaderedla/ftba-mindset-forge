@@ -107,18 +107,18 @@ export const FtbaDisplay: React.FC<FtbaDisplayProps> = ({ content, age, category
                     🎯 Visualization Practice
                   </h4>
                   <p className="text-sm text-muted-foreground bg-card/50 p-4 rounded-lg border border-border/30">
-                    {section.data.visualization}
+                    {content.feel.visualization}
                   </p>
                 </div>
               )}
 
-              {section.key === 'believe' && 'coreBeliefs' in section.data && (
+              {section.key === 'believe' && (
                 <div>
                   <h4 className="font-semibold text-primary mb-3 flex items-center gap-2">
                     🔥 Core Beliefs to Adopt
                   </h4>
                   <div className="space-y-2">
-                    {section.data.coreBeliefs.map((belief, idx) => (
+                    {content.believe.coreBeliefs.map((belief, idx) => (
                       <div key={idx} className="flex items-start gap-3 text-sm">
                         <span className="text-primary mt-1">✓</span>
                         <span className="text-muted-foreground font-medium">{belief}</span>
@@ -128,13 +128,13 @@ export const FtbaDisplay: React.FC<FtbaDisplayProps> = ({ content, age, category
                 </div>
               )}
 
-              {section.key === 'act' && 'actionSteps' in section.data && (
+              {section.key === 'act' && (
                 <div>
                   <h4 className="font-semibold text-primary mb-3 flex items-center gap-2">
                     🚀 Immediate Action Steps
                   </h4>
                   <div className="space-y-3">
-                    {section.data.actionSteps.map((step, idx) => (
+                    {content.act.actionSteps.map((step, idx) => (
                       <div key={idx} className="flex items-start gap-3 text-sm bg-primary/5 p-3 rounded-lg border border-primary/20">
                         <span className="bg-primary text-background w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mt-0.5">
                           {idx + 1}
