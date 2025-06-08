@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,44 +8,71 @@
 
 @layer base {
   :root {
-    --background: 12 10% 9%;
-    --foreground: 45 100% 85%;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 15%;
 
-    --card: 20 14% 12%;
-    --card-foreground: 45 100% 85%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
 
-    --popover: 20 14% 12%;
-    --popover-foreground: 45 100% 85%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
 
-    --primary: 45 93% 58%;
-    --primary-foreground: 12 10% 9%;
+    --primary: 0 0% 25%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 30 25% 25%;
-    --secondary-foreground: 45 100% 85%;
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 25%;
 
-    --muted: 25 20% 20%;
-    --muted-foreground: 45 50% 65%;
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 45 93% 58%;
-    --accent-foreground: 12 10% 9%;
+    --accent: 0 0% 90%;
+    --accent-foreground: 0 0% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 25% 25%;
-    --input: 30 25% 25%;
-    --ring: 45 93% 58%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 0 0% 25%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --sidebar-background: 12 10% 9%;
-    --sidebar-foreground: 45 100% 85%;
-    --sidebar-primary: 45 93% 58%;
-    --sidebar-primary-foreground: 12 10% 9%;
-    --sidebar-accent: 30 25% 25%;
-    --sidebar-accent-foreground: 45 100% 85%;
-    --sidebar-border: 30 25% 25%;
-    --sidebar-ring: 45 93% 58%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 0 0% 25%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 95%;
+    --sidebar-accent-foreground: 0 0% 15%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 0 0% 25%;
+  }
+
+  [data-theme="dark"] {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 92%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 92%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 92%;
+
+    --primary: 0 0% 85%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 85%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 0 0% 18%;
+    --accent-foreground: 0 0% 85%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 0% 75%;
   }
 }
 
@@ -56,17 +84,68 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-primary via-yellow-400 to-primary bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-foreground via-foreground/80 to-foreground bg-clip-text text-transparent;
   }
 
-  .leadership-glow {
-    box-shadow: 0 0 40px rgba(251, 191, 36, 0.3);
+  .elegant-card {
+    @apply bg-card/60 backdrop-blur-sm border border-border/40 rounded-lg transition-all duration-500 hover:border-border hover:shadow-lg hover:shadow-foreground/5;
   }
 
-  .motivation-card {
-    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20;
+  .subtle-hover {
+    @apply transition-all duration-300 hover:translate-y-[-2px] hover:shadow-md hover:shadow-foreground/10;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .fade-in-delayed {
+    animation: fadeIn 0.8s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+
+  .slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .section-spacing {
+    @apply py-20 lg:py-32;
+  }
+
+  .container-padding {
+    @apply px-6 lg:px-8;
   }
 }

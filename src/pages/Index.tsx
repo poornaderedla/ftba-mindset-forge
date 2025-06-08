@@ -36,8 +36,8 @@ const Index = () => {
     if (!selectedAge || !selectedCategory) return;
     
     setIsGenerating(true);
-    // Simulate AI processing time for dramatic effect
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // Simulate processing time for dramatic effect
+    await new Promise(resolve => setTimeout(resolve, 1500));
     
     const content = generateFtbaContent(selectedAge, selectedCategory);
     setFtbaContent(content);
@@ -45,218 +45,195 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-background/80">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/10" />
-        <div className="container mx-auto px-4 py-16 relative">
-          <div className="text-center max-w-4xl mx-auto">
-            <Badge className="mb-6 bg-primary/20 text-primary border-primary/30 text-sm font-medium px-4 py-2">
-              Revolutionary Mindset Transformation
-            </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              <span className="gradient-text">FTBA</span>
-              <br />
-              <span className="text-foreground">Methodology</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-              Transform your life through the power of <strong className="text-primary">Feel</strong>, <strong className="text-primary">Think</strong>, <strong className="text-primary">Believe</strong>, and <strong className="text-primary">Act</strong>
-            </p>
-            <div className="flex flex-wrap justify-center gap-8 text-sm text-muted-foreground mb-12">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-primary rounded-full" />
-                <span>AI-Powered Personalization</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-primary rounded-full" />
-                <span>Psychology-Based Framework</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-primary rounded-full" />
-                <span>Instant Transformation Blueprint</span>
+      <section className="section-spacing">
+        <div className="container mx-auto container-padding">
+          <div className="text-center max-w-5xl mx-auto space-y-8">
+            <div className="fade-in">
+              <Badge className="mb-6 bg-accent text-accent-foreground border-border text-sm font-medium px-6 py-3 rounded-full">
+                Revolutionary Mindset Transformation
+              </Badge>
+              <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-[0.9] tracking-tight">
+                <span className="gradient-text">FTBA</span>
+                <br />
+                <span className="text-foreground/90">Methodology</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-4xl mx-auto font-light">
+                Transform your life through the power of <strong className="text-foreground font-medium">Feel</strong>, <strong className="text-foreground font-medium">Think</strong>, <strong className="text-foreground font-medium">Believe</strong>, and <strong className="text-foreground font-medium">Act</strong>
+              </p>
+            </div>
+            
+            <div className="fade-in-delayed">
+              <div className="flex flex-wrap justify-center gap-12 text-sm text-muted-foreground">
+                <div className="flex items-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                  <span>AI-Powered Personalization</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                  <span>Psychology-Based Framework</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                  <span>Instant Transformation Blueprint</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* FTBA Explanation */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-              The Science Behind <span className="gradient-text">Transformation</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              FTBA isn't just another self-help method. It's a scientifically-backed framework that rewires your mind from the inside out, creating lasting change through precise psychological triggers.
-            </p>
-          </div>
+      <section className="section-spacing bg-accent/30">
+        <div className="container mx-auto container-padding">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-20 slide-up">
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
+                The Science Behind <span className="gradient-text">Transformation</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
+                FTBA isn't just another self-help method. It's a scientifically-backed framework that rewires your mind from the inside out, creating lasting change through precise psychological triggers.
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <Card className="motivation-card group hover:scale-105">
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold group-hover:scale-110 transition-transform">
-                  F
-                </div>
-                <CardTitle className="text-xl font-bold text-primary">FEEL</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-muted-foreground text-sm">
-                  Connect with your deepest emotions and desires. Emotional alignment is the foundation of all transformation.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="motivation-card group hover:scale-105">
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold group-hover:scale-110 transition-transform">
-                  T
-                </div>
-                <CardTitle className="text-xl font-bold text-primary">THINK</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-muted-foreground text-sm">
-                  Rewire your mental patterns with empowering thoughts. Your mindset determines your reality.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="motivation-card group hover:scale-105">
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold group-hover:scale-110 transition-transform">
-                  B
-                </div>
-                <CardTitle className="text-xl font-bold text-primary">BELIEVE</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-muted-foreground text-sm">
-                  Adopt unshakeable beliefs that support your vision. Belief is the bridge between thoughts and reality.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="motivation-card group hover:scale-105">
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold group-hover:scale-110 transition-transform">
-                  A
-                </div>
-                <CardTitle className="text-xl font-bold text-primary">ACT</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-muted-foreground text-sm">
-                  Take aligned action that manifests your vision. Consistent action creates extraordinary results.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                { letter: 'F', title: 'FEEL', description: 'Connect with your deepest emotions and desires. Emotional alignment is the foundation of all transformation.', color: 'from-foreground/20 to-foreground/10' },
+                { letter: 'T', title: 'THINK', description: 'Rewire your mental patterns with empowering thoughts. Your mindset determines your reality.', color: 'from-foreground/20 to-foreground/10' },
+                { letter: 'B', title: 'BELIEVE', description: 'Adopt unshakeable beliefs that support your vision. Belief is the bridge between thoughts and reality.', color: 'from-foreground/20 to-foreground/10' },
+                { letter: 'A', title: 'ACT', description: 'Take aligned action that manifests your vision. Consistent action creates extraordinary results.', color: 'from-foreground/20 to-foreground/10' }
+              ].map((item, index) => (
+                <Card key={item.letter} className={`elegant-card subtle-hover slide-up`} style={{ animationDelay: `${index * 0.1}s` }}>
+                  <CardHeader className="text-center pb-6">
+                    <div className={`w-20 h-20 bg-gradient-to-br ${item.color} rounded-2xl flex items-center justify-center mx-auto mb-6 text-foreground text-2xl font-bold border border-border/20`}>
+                      {item.letter}
+                    </div>
+                    <CardTitle className="text-xl font-bold text-foreground">{item.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Personalization Engine */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <Card className="motivation-card leadership-glow">
-            <CardHeader className="text-center">
-              <CardTitle className="text-3xl font-bold mb-4">
-                Your Personalized <span className="gradient-text">FTBA Blueprint</span>
-              </CardTitle>
-              <p className="text-muted-foreground">
-                Get a custom-tailored transformation framework designed specifically for your life stage and goals.
-              </p>
-            </CardHeader>
-            <CardContent className="space-y-8">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-3">
-                  <label className="text-sm font-medium text-foreground">Select Your Life Stage</label>
-                  <Select value={selectedAge} onValueChange={setSelectedAge}>
-                    <SelectTrigger className="h-12 bg-background/50 border-border hover:border-primary/50 transition-colors">
-                      <SelectValue placeholder="Choose your age group..." />
-                    </SelectTrigger>
-                    <SelectContent className="bg-card border-border">
-                      {ageCategories.map((age) => (
-                        <SelectItem key={age.value} value={age.value} className="hover:bg-primary/20">
-                          <div>
-                            <div className="font-medium">{age.label}</div>
-                            <div className="text-xs text-muted-foreground">{age.description}</div>
-                          </div>
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+      <section className="section-spacing">
+        <div className="container mx-auto container-padding">
+          <div className="max-w-4xl mx-auto">
+            <Card className="elegant-card border-2 border-border/60 shadow-xl shadow-foreground/5">
+              <CardHeader className="text-center pb-8">
+                <CardTitle className="text-4xl font-bold mb-6">
+                  Your Personalized <span className="gradient-text">FTBA Blueprint</span>
+                </CardTitle>
+                <p className="text-muted-foreground text-lg font-light leading-relaxed">
+                  Get a custom-tailored transformation framework designed specifically for your life stage and goals.
+                </p>
+              </CardHeader>
+              <CardContent className="space-y-10">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="space-y-4">
+                    <label className="text-sm font-medium text-foreground tracking-wide">Select Your Life Stage</label>
+                    <Select value={selectedAge} onValueChange={setSelectedAge}>
+                      <SelectTrigger className="h-14 bg-background border-border hover:border-foreground/30 transition-colors text-left">
+                        <SelectValue placeholder="Choose your age group..." />
+                      </SelectTrigger>
+                      <SelectContent className="bg-card border-border shadow-lg">
+                        {ageCategories.map((age) => (
+                          <SelectItem key={age.value} value={age.value} className="hover:bg-accent">
+                            <div className="py-2">
+                              <div className="font-medium text-foreground">{age.label}</div>
+                              <div className="text-xs text-muted-foreground mt-1">{age.description}</div>
+                            </div>
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div className="space-y-4">
+                    <label className="text-sm font-medium text-foreground tracking-wide">Select Your Category</label>
+                    <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+                      <SelectTrigger className="h-14 bg-background border-border hover:border-foreground/30 transition-colors text-left">
+                        <SelectValue placeholder="Choose your role..." />
+                      </SelectTrigger>
+                      <SelectContent className="bg-card border-border shadow-lg">
+                        {lifeCategories.map((category) => (
+                          <SelectItem key={category.value} value={category.value} className="hover:bg-accent">
+                            <div className="flex items-center gap-3 py-2">
+                              <span className="text-lg">{category.icon}</span>
+                              <span className="font-medium text-foreground">{category.label}</span>
+                            </div>
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
                 </div>
 
-                <div className="space-y-3">
-                  <label className="text-sm font-medium text-foreground">Select Your Category</label>
-                  <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                    <SelectTrigger className="h-12 bg-background/50 border-border hover:border-primary/50 transition-colors">
-                      <SelectValue placeholder="Choose your role..." />
-                    </SelectTrigger>
-                    <SelectContent className="bg-card border-border">
-                      {lifeCategories.map((category) => (
-                        <SelectItem key={category.value} value={category.value} className="hover:bg-primary/20">
-                          <div className="flex items-center gap-2">
-                            <span>{category.icon}</span>
-                            <span className="font-medium">{category.label}</span>
-                          </div>
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                <Separator className="bg-border/60" />
+
+                <div className="text-center">
+                  <Button 
+                    onClick={handleGenerateFtba}
+                    disabled={!selectedAge || !selectedCategory || isGenerating}
+                    className="h-16 px-12 text-lg font-medium bg-foreground hover:bg-foreground/90 text-background transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed rounded-lg"
+                  >
+                    {isGenerating ? (
+                      <div className="flex items-center gap-3">
+                        <div className="w-5 h-5 border-2 border-background/30 border-t-background rounded-full animate-spin" />
+                        Generating Your Blueprint...
+                      </div>
+                    ) : (
+                      'Generate My FTBA Blueprint'
+                    )}
+                  </Button>
                 </div>
-              </div>
-
-              <Separator className="bg-border/50" />
-
-              <div className="text-center">
-                <Button 
-                  onClick={handleGenerateFtba}
-                  disabled={!selectedAge || !selectedCategory || isGenerating}
-                  className="h-14 px-8 text-lg font-semibold bg-gradient-to-r from-primary to-yellow-400 hover:from-primary/90 hover:to-yellow-400/90 text-background transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isGenerating ? (
-                    <div className="flex items-center gap-3">
-                      <div className="w-5 h-5 border-2 border-background/30 border-t-background rounded-full animate-spin" />
-                      Generating Your Blueprint...
-                    </div>
-                  ) : (
-                    'Generate My FTBA Blueprint'
-                  )}
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* FTBA Results */}
       {ftbaContent && (
-        <div className="container mx-auto px-4 py-16">
-          <FtbaDisplay content={ftbaContent} age={selectedAge} category={selectedCategory} />
-        </div>
+        <section className="section-spacing bg-accent/20">
+          <div className="container mx-auto container-padding">
+            <FtbaDisplay content={ftbaContent} age={selectedAge} category={selectedCategory} />
+          </div>
+        </section>
       )}
 
       {/* Call to Action */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center max-w-3xl mx-auto">
-          <h3 className="text-3xl font-bold mb-6">
-            Ready to <span className="gradient-text">Transform Your Life</span>?
-          </h3>
-          <p className="text-lg text-muted-foreground mb-8">
-            Your personalized FTBA blueprint is just the beginning. The power to change your life lies in your commitment to consistent action.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Badge variant="outline" className="px-4 py-2 border-primary/30 text-primary">
-              Psychology-Backed
-            </Badge>
-            <Badge variant="outline" className="px-4 py-2 border-primary/30 text-primary">
-              Instantly Actionable
-            </Badge>
-            <Badge variant="outline" className="px-4 py-2 border-primary/30 text-primary">
-              Scientifically Proven
-            </Badge>
+      <section className="section-spacing">
+        <div className="container mx-auto container-padding">
+          <div className="text-center max-w-4xl mx-auto space-y-8">
+            <h3 className="text-4xl font-bold mb-8">
+              Ready to <span className="gradient-text">Transform Your Life</span>?
+            </h3>
+            <p className="text-lg text-muted-foreground mb-12 font-light leading-relaxed">
+              Your personalized FTBA blueprint is just the beginning. The power to change your life lies in your commitment to consistent action.
+            </p>
+            <div className="flex flex-wrap justify-center gap-6">
+              <Badge variant="outline" className="px-6 py-3 border-border text-foreground text-sm">
+                Psychology-Backed
+              </Badge>
+              <Badge variant="outline" className="px-6 py-3 border-border text-foreground text-sm">
+                Instantly Actionable
+              </Badge>
+              <Badge variant="outline" className="px-6 py-3 border-border text-foreground text-sm">
+                Scientifically Proven
+              </Badge>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
