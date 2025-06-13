@@ -139,6 +139,63 @@ const ftbaDatabase: Record<string, Record<string, FtbaContent>> = {
           'I take ownership of my career development and success'
         ]
       }
+    },
+    'job-seekers': {
+      feel: {
+        title: 'Transform Job Hunting into Opportunity Discovery',
+        description: 'Feel excited about this phase of exploration and growth. Each application and interview is bringing you closer to your ideal opportunity and helping you clarify what you truly want.',
+        visualization: 'Picture yourself walking into your dream job on your first day, feeling confident and excited about the contribution you\'ll make. Feel the satisfaction of finding the perfect match for your skills and aspirations.',
+        affirmations: [
+          'I feel confident about my value and what I bring to employers',
+          'I am excited about discovering the perfect opportunity for me',
+          'I feel energized by the process of finding my ideal role',
+          'Every rejection brings me closer to the right opportunity'
+        ]
+      },
+      think: {
+        title: 'Adopt the Mindset of a Strategic Career Builder',
+        description: 'Think of job searching as market research for your career. You\'re not just looking for any job - you\'re finding the right platform to showcase your talents and grow.',
+        affirmations: [
+          'I am a valuable asset that the right employer is looking for',
+          'Every interview is an opportunity to practice and improve',
+          'I approach job searching with strategy and confidence',
+          'My unique combination of skills makes me irreplaceable',
+          'I am building relationships, not just applying for jobs'
+        ]
+      },
+      believe: {
+        title: 'Your Perfect Role is Seeking You Too',
+        description: 'Believe that there\'s an employer out there who needs exactly what you offer. Your job search is a mutual discovery process where you\'re both finding the perfect match.',
+        coreBeliefs: [
+          'The right opportunity will recognize my value immediately',
+          'My skills and experience are exactly what someone needs',
+          'Job searching is helping me become clearer about my goals',
+          'Every experience in this process is making me stronger'
+        ],
+        affirmations: [
+          'I believe my perfect role is actively seeking me',
+          'I am worthy of a position that values and develops my talents',
+          'I believe in my ability to find meaningful work',
+          'The right opportunity will appear at the perfect time'
+        ]
+      },
+      act: {
+        title: 'Execute Your Strategic Job Search',
+        description: 'Take focused actions that position you as the ideal candidate and help you discover opportunities that align with your values and goals.',
+        actionSteps: [
+          'Research companies and roles that align with your values and goals',
+          'Customize your resume and cover letter for each application',
+          'Network actively and build relationships in your target industry',
+          'Practice interviewing and refine your personal brand story',
+          'Follow up professionally and maintain connections'
+        ],
+        affirmations: [
+          'I take strategic action in my job search every day',
+          'I present myself professionally and authentically',
+          'I build valuable relationships throughout my search process',
+          'I am persistent and professional in all my communications'
+        ]
+      }
     }
   },
   'young-adults': {
@@ -253,6 +310,120 @@ const ftbaDatabase: Record<string, Record<string, FtbaContent>> = {
           'I validate my ideas and adapt quickly based on market feedback',
           'I learn from successful entrepreneurs and apply their strategies',
           'Every day I take steps that bring my business vision to life'
+        ]
+      }
+    },
+    'freelancers': {
+      feel: {
+        title: 'Embrace Your Creative Freedom',
+        description: 'Feel the excitement of being your own boss and the satisfaction of choosing projects that align with your values. You have the freedom to create your ideal work life.',
+        visualization: 'Picture yourself working on exciting projects with clients you love, setting your own schedule, and earning income that reflects your true value. Feel the pride of building something entirely your own.',
+        affirmations: [
+          'I feel empowered by my independence and freedom',
+          'I am excited about the variety and creativity in my work',
+          'I feel confident in my ability to deliver exceptional value',
+          'Every project teaches me something new and valuable'
+        ]
+      },
+      think: {
+        title: 'Master the Freelancer Success Mindset',
+        description: 'Think like a business owner who happens to be the primary service provider. You\'re not just selling your time - you\'re selling solutions and transformation.',
+        affirmations: [
+          'I think strategically about building my freelance business',
+          'My skills and expertise are in high demand',
+          'I attract clients who value quality and are willing to pay for it',
+          'Every challenge makes me a more skilled and valuable freelancer',
+          'I am building a sustainable and profitable business'
+        ]
+      },
+      believe: {
+        title: 'Your Skills Are Your Superpower',
+        description: 'Believe that your unique combination of skills, experience, and creativity makes you irreplaceable. You have the power to choose your path and create your ideal lifestyle.',
+        coreBeliefs: [
+          'My skills and expertise are valuable and in demand',
+          'I can build a thriving business around my talents',
+          'Clients are willing to pay premium rates for exceptional work',
+          'I have the freedom to design my ideal work life'
+        ],
+        affirmations: [
+          'I believe in the value I bring to every project',
+          'I am building a sustainable freelance business',
+          'I believe I can earn excellent income through my skills',
+          'My expertise opens doors to amazing opportunities'
+        ]
+      },
+      act: {
+        title: 'Build Your Freelance Empire',
+        description: 'Take strategic actions to build a sustainable freelance business that provides both financial freedom and personal fulfillment.',
+        actionSteps: [
+          'Develop a strong portfolio that showcases your best work',
+          'Build your thought leadership through content and speaking',
+          'Create systems that scale your impact beyond one-on-one work',
+          'Collect and share client success stories and testimonials',
+          'Continuously develop your skills and expand your expertise'
+        ],
+        affirmations: [
+          'I consistently deliver exceptional results for my clients',
+          'I build my reputation as a trusted expert and thought leader',
+          'I create systems that scale my impact and expertise',
+          'I continuously invest in my own growth to better serve others'
+        ]
+      }
+    },
+    'career-changers': {
+      feel: {
+        title: 'Embrace the Courage of Transformation',
+        description: 'Feel proud of your courage to pursue a path that truly aligns with your values and passions. This transition is an investment in your happiness and fulfillment.',
+        visualization: 'See yourself thriving in your new career, using skills you\'re passionate about and making the impact you\'ve always wanted. Feel the satisfaction of following your authentic path.',
+        affirmations: [
+          'I feel brave and excited about my career transformation',
+          'I am proud of myself for pursuing what truly matters to me',
+          'I feel energized by learning new skills and exploring new possibilities',
+          'Every step of this journey is leading me to my ideal career'
+        ]
+      },
+      think: {
+        title: 'Think Like a Strategic Career Architect',
+        description: 'Your previous experience isn\'t a waste - it\'s a unique advantage. Think about how to leverage your existing skills while building new ones.',
+        affirmations: [
+          'My diverse experience gives me a unique perspective and advantage',
+          'I can learn new skills while leveraging what I already know',
+          'Career change is an investment in my long-term happiness',
+          'My maturity and experience accelerate my learning',
+          'I think strategically about building my new career path'
+        ]
+      },
+      believe: {
+        title: 'It\'s Never Too Late to Follow Your Dreams',
+        description: 'Believe that your career change is perfectly timed. You have the wisdom, skills, and motivation to succeed in your new field.',
+        coreBeliefs: [
+          'I have the skills and determination to succeed in my new field',
+          'My life experience is an asset in my career transition',
+          'It\'s never too late to pursue work that fulfills me',
+          'I can successfully transition to a career I\'m passionate about'
+        ],
+        affirmations: [
+          'I believe this career change will transform my life for the better',
+          'I have everything I need to succeed in my new field',
+          'I believe in my ability to master new skills and concepts',
+          'My career change is perfectly timed and aligned'
+        ]
+      },
+      act: {
+        title: 'Execute Your Career Transformation Plan',
+        description: 'Take strategic actions to transition smoothly into your new career while leveraging your existing strengths and experience.',
+        actionSteps: [
+          'Identify transferable skills from your previous experience',
+          'Build new skills through courses, certifications, or volunteer work',
+          'Network with professionals in your target field',
+          'Consider transitional roles that bridge your old and new careers',
+          'Create a timeline and financial plan for your transition'
+        ],
+        affirmations: [
+          'I take consistent action toward my new career every day',
+          'I leverage my existing strengths while building new skills',
+          'I network effectively and build relationships in my new field',
+          'I plan my transition strategically and execute it confidently'
         ]
       }
     }
@@ -371,6 +542,120 @@ const ftbaDatabase: Record<string, Record<string, FtbaContent>> = {
           'I maintain perfect balance between success and personal fulfillment'
         ]
       }
+    },
+    'remote-workers': {
+      feel: {
+        title: 'Master the Art of Remote Excellence',
+        description: 'Feel empowered by your ability to work effectively from anywhere while maintaining strong professional relationships. You\'re pioneering the future of work.',
+        visualization: 'Picture yourself thriving in your ideal work environment, delivering exceptional results while enjoying the flexibility and freedom that remote work provides.',
+        affirmations: [
+          'I feel confident and productive in my remote work environment',
+          'I love the flexibility and freedom that remote work provides',
+          'I feel connected and valued by my team despite the distance',
+          'I am proud of my ability to excel in a remote setting'
+        ]
+      },
+      think: {
+        title: 'Think Like a Digital Native Professional',
+        description: 'Master the mindset of someone who can create impact and build relationships regardless of physical location. You\'re part of the new workforce revolution.',
+        affirmations: [
+          'I excel at remote communication and collaboration',
+          'I am disciplined and focused in my work environment',
+          'I build strong relationships through digital channels',
+          'I leverage technology to maximize my productivity and impact',
+          'I think creatively about solving remote work challenges'
+        ]
+      },
+      believe: {
+        title: 'You Are the Future of Work',
+        description: 'Believe that remote work isn\'t just a temporary arrangement - it\'s the future of professional life, and you\'re mastering the skills that will be most valuable.',
+        coreBeliefs: [
+          'I can be just as effective remotely as in a traditional office',
+          'Remote work allows me to optimize my productivity and well-being',
+          'I am building skills that are increasingly valuable in the modern workplace',
+          'I can maintain strong professional relationships from anywhere'
+        ],
+        affirmations: [
+          'I believe I am a pioneer of the future of work',
+          'I excel at remote work and am setting an example for others',
+          'I believe remote work enhances my productivity and life quality',
+          'I am building a career that gives me ultimate flexibility'
+        ]
+      },
+      act: {
+        title: 'Optimize Your Remote Work Success',
+        description: 'Take actions that maximize your effectiveness, maintain strong relationships, and position you as a remote work leader.',
+        actionSteps: [
+          'Create a dedicated workspace that optimizes focus and productivity',
+          'Develop strong communication routines with your team',
+          'Set clear boundaries between work and personal time',
+          'Invest in the technology and tools that enhance your performance',
+          'Build your personal brand as a remote work expert'
+        ],
+        affirmations: [
+          'I optimize my environment for maximum productivity and focus',
+          'I communicate clearly and build strong virtual relationships',
+          'I maintain excellent work-life balance in my remote setup',
+          'I continuously improve my remote work skills and systems'
+        ]
+      }
+    },
+    'small-business-owners': {
+      feel: {
+        title: 'Embrace Your Role as a Community Builder',
+        description: 'Feel the pride of building something that serves your community while creating opportunities for others. You\'re not just running a business - you\'re creating impact.',
+        visualization: 'See your business thriving and positively impacting your community. Feel the satisfaction of providing excellent products or services while building a sustainable enterprise.',
+        affirmations: [
+          'I feel proud of the positive impact my business creates',
+          'I am excited about growing my business sustainably',
+          'I feel confident in my ability to lead and make decisions',
+          'Every day I feel more skilled as a business owner'
+        ]
+      },
+      think: {
+        title: 'Think Like a Strategic Business Leader',
+        description: 'Balance the day-to-day operations with long-term vision. Think about systems, growth, and sustainable impact rather than just immediate needs.',
+        affirmations: [
+          'I think strategically about my business growth and sustainability',
+          'I build systems that allow my business to run efficiently',
+          'I balance short-term needs with long-term vision',
+          'I make decisions that benefit my customers, team, and community',
+          'I think like an owner, not just an operator'
+        ]
+      },
+      believe: {
+        title: 'Your Business is Your Legacy',
+        description: 'Believe that your small business has the power to create meaningful change in your community while providing you with financial freedom and personal fulfillment.',
+        coreBeliefs: [
+          'My business creates real value for my customers and community',
+          'I have the skills and determination to build a successful enterprise',
+          'Small businesses are the backbone of thriving communities',
+          'I can build a business that aligns with my values and goals'
+        ],
+        affirmations: [
+          'I believe my business will create lasting positive impact',
+          'I have what it takes to build a thriving, sustainable business',
+          'I believe in the value my business brings to the market',
+          'My business success creates opportunities for others'
+        ]
+      },
+      act: {
+        title: 'Build Your Business Empire',
+        description: 'Take strategic actions to grow your business sustainably while maintaining the values and vision that inspired you to start.',
+        actionSteps: [
+          'Focus on delivering exceptional value to your customers',
+          'Build systems and processes that ensure consistent quality',
+          'Invest in your team and create a positive workplace culture',
+          'Develop strong relationships with suppliers and partners',
+          'Plan for sustainable growth and financial stability'
+        ],
+        affirmations: [
+          'I consistently deliver exceptional value to my customers',
+          'I build strong systems and processes for sustainable growth',
+          'I invest in my team and create a positive work environment',
+          'I make strategic decisions that ensure long-term success'
+        ]
+      }
     }
   },
   'mid-life': {
@@ -434,7 +719,7 @@ const ftbaDatabase: Record<string, Record<string, FtbaContent>> = {
     'parents': {
       feel: {
         title: 'Embrace Your Role as a Life Architect',
-        description: 'Feel the profound responsibility and joy of shaping the next generation. You\'re not just raising children - you\'re developing future leaders who will change the world.',
+        description: 'Feel the profound responsibility and joy of shaping the next generation. You\'re not just raising children - you're developing future leaders who will change the world.',
         visualization: 'Picture your children as successful, confident adults who contribute positively to the world. Feel the pride of knowing that your guidance and example set them up for extraordinary lives.',
         affirmations: [
           'I feel deeply fulfilled by my role in shaping the next generation',
@@ -485,6 +770,63 @@ const ftbaDatabase: Record<string, Record<string, FtbaContent>> = {
           'I create meaningful connections and learning opportunities daily',
           'I actively develop my children\'s confidence and capabilities',
           'I balance guidance with independence to help them thrive'
+        ]
+      }
+    },
+    'stay-at-home-parents': {
+      feel: {
+        title: 'Honor Your Full-Time Dedication to Family',
+        description: 'Feel proud of choosing to dedicate yourself fully to your children\'s development. You're making one of the most important investments possible - in the next generation.',
+        visualization: 'See the profound impact of your daily presence and guidance in your children's lives. Feel the satisfaction of being there for every milestone and learning moment.',
+        affirmations: [
+          'I feel proud of my choice to dedicate myself to my children',
+          'I am making one of the most important contributions to society',
+          'I feel fulfilled by the daily impact I have on my family',
+          'Every moment I invest in my children creates lasting value'
+        ]
+      },
+      think: {
+        title: 'Think Like a Child Development Expert',
+        description: 'You're not just "watching" children - you're actively shaping minds, character, and futures. Think about the strategic importance of your role.',
+        affirmations: [
+          'I am my children\'s first and most important teacher',
+          'Every interaction is an opportunity to build their confidence and skills',
+          'I create a foundation of love and learning that will last their lifetime',
+          'My presence and attention are giving my children an invaluable advantage',
+          'I think intentionally about how to maximize my positive impact'
+        ]
+      },
+      believe: {
+        title: 'Your Work is Invaluable and Irreplaceable',
+        description: 'Believe that choosing to be a full-time parent is a valuable career choice that creates immeasurable impact on your family and society.',
+        coreBeliefs: [
+          'My full-time presence is giving my children the best possible start',
+          'I am contributing to society by raising confident, capable children',
+          'The investment I\'m making now will pay dividends for generations',
+          'I can pursue personal growth while being an excellent parent'
+        ],
+        affirmations: [
+          'I believe my role as a stay-at-home parent is invaluable',
+          'I am making the most important investment possible in my children',
+          'I believe in the long-term impact of my daily dedication',
+          'My choice to be present for my children is creating lasting value'
+        ]
+      },
+      act: {
+        title: 'Maximize Your Impact as a Full-Time Parent',
+        description: 'Take intentional actions that make the most of your time with your children while maintaining your own growth and well-being.',
+        actionSteps: [
+          'Create structured learning and play activities that develop skills',
+          'Build a supportive community with other parents',
+          'Maintain your own interests and continue personal development',
+          'Document and celebrate your children\'s growth and milestones',
+          'Take care of your physical and mental health consistently'
+        ],
+        affirmations: [
+          'I create enriching experiences that develop my children\'s potential',
+          'I build supportive relationships with other parents and families',
+          'I maintain my own growth while investing in my children',
+          'I take excellent care of myself so I can give my best to my family'
         ]
       }
     }

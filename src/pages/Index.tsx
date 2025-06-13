@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -27,8 +26,15 @@ const Index = () => {
     { value: 'employees', label: 'Employees', icon: '💼' },
     { value: 'entrepreneurs', label: 'Entrepreneurs', icon: '🚀' },
     { value: 'solopreneurs', label: 'Solopreneurs', icon: '⚡' },
+    { value: 'freelancers', label: 'Freelancers', icon: '💻' },
+    { value: 'small-business-owners', label: 'Small Business Owners', icon: '🏪' },
+    { value: 'remote-workers', label: 'Remote Workers', icon: '🌐' },
+    { value: 'coaches-consultants', label: 'Coaches & Consultants', icon: '🎯' },
     { value: 'creatives', label: 'Creatives', icon: '🎨' },
     { value: 'parents', label: 'Parents', icon: '👨‍👩‍👧‍👦' },
+    { value: 'stay-at-home-parents', label: 'Stay-at-home Parents', icon: '🏠' },
+    { value: 'career-changers', label: 'Career Changers', icon: '🔄' },
+    { value: 'job-seekers', label: 'Job Seekers', icon: '🔍' },
     { value: 'retirees', label: 'Retirees', icon: '🌅' }
   ];
 
